@@ -2,7 +2,7 @@
 
 :root {
     --yellow: #ffd602;
-    --red: #d5040a;
+    --red: #d40d13;
     --blue: #036cd6
 };
 
@@ -25,14 +25,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(99, 129, 192);
+    background-color: var(--red);
     position: absolute;
     z-index: 3;
 
     animation: loader 2s linear forwards;
 }
 .loader div {
-    background-color: brown;
+    background-color: #ffa928;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -275,4 +275,39 @@ body {
 .cerrar {
     width: 20px;
     margin: 10px;
+}
+
+.footer img {
+    width: 100%;
+    grid-column: 2 / 6;
+    grid-row:  1 / 6;
+    transition: transform 0.3s ease-in-out;
+
+
+    animation: 2s footer-img 0.5s ease-in-out;
+}
+@keyframes footer-img {
+    0% {
+        transform: translateY(600px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.footer img:hover {
+    cursor: pointer;
+    transform: translateY(-20px) scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal_content  h1 {
+    text-align: center;
+}
+
+.modal_content p {
+    text-align: justify;
+    margin-bottom: 0;
+    margin-left: 40px;
+    margin-right: 40px;
 }
